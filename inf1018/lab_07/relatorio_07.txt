@@ -1,0 +1,24 @@
+---------------------
+Ex 03
+---------------------
+
+programa em c que faz o quadrado:
+
+#include <stdio.h>
+
+int main(void){
+    for(int i =1; i<=10;i++){
+        printf("%d\n",i*i);
+    }
+    return 0;
+}
+
+traduzindo para Assembly:
+
+
+.data
+Sf:  .string "%d\n"    # string de formato para printf
+
+.text
+.globl  main
+main:

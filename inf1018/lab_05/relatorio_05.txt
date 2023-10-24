@@ -1,0 +1,36 @@
+Ricardo de Camargo Stuckert
+1713112
+
+---------------------
+Ex 01
+---------------------
+
+   
+    int b[2];
+        O array b tem 2 elementos.
+        tamanho total do array b é 2 * 4(int) = 8 bytes.
+
+    short a[2][3];
+        C
+        matriz com  2 linhas e 3 colunas.
+        tamanho de cada elemento: 2 * 3 * 2(short) = 12 bytes.
+
+
+---------------------- 
+Ex2
+---------------------- 
+
+
+   O tamanho da estrutura é 12 bytes. 
+   4 bytes para int, 
+   2 bytes para short 
+   4 bytes para int.
+   O buraco e o padding ocorre para alinhar como foi explicado em aula.
+
+
+---------------------- 
+Ex3
+----------------------
+
+
+

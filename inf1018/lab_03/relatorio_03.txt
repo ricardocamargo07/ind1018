@@ -1,0 +1,20 @@
+Ricardo de Camargo Stuckert
+1713112
+
+Ex 01
+
+unsigned int x =        0x87654321;
+                    &   0x000000FF
+                    ------------------
+                          00000021
+
+Assim temos que = x & 0x000000FF = 0x00000021;
+
+
+unsigned int x =        0x87654321;
+                    |   0xFF000000
+                    ------------------
+                          FF654321
+
+Assim  temos que z = x | 0xFF000000 = 0xFF654321;
+

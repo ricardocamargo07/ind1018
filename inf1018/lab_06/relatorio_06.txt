@@ -1,0 +1,141 @@
+Ricardo de Camargo Stuckert
+1713112
+
+---------------------
+Ex 01
+---------------------
+  
+    
+    .data
+    nums:  .int  10, -21, -30, 45
+
+    define um array chamado nums com os numeros 10, -21, -30, 45
+
+    -----------------------------------------------------------------
+
+    Sf:  .string "%d\n"    # string de formato para printf
+
+    define uma variavel Sf que é um formato do print a ser impresso
+
+    -----------------------------------------------------------------
+    .text
+    .globl  main
+    main:
+
+    define uma funcao global chamada main
+
+    ------------------------------------------------------------------
+
+    movl  $0, %ebx  /* ebx = 0; */
+
+    movl pois são 4 bytes, %ebx define a variavel i do codigo em c
+
+    ------------------------------------------------------------------
+
+    movq  $nums, %r12  /* r12 = &nums */
+
+    movq pois é um ponteiro 8 bytes, %r12 define o ponteiro apontado
+    para o endereco do array nums
+
+    ------------------------------------------------------------------
+
+    L1:
+
+    cmpl  $4, %ebx  /* if (ebx == 4) ? */
+    
+    cmpl pois é um comparador if pega o valor da "ebx" atribui 4 a ele
+    fazendo assim o if(ebx que no caso é i == 4)
+    
+    -----------------------------------------------------------------
+
+    se exb == 4 entao ele vai dar um jump para L2 que sai do for e vai 
+    para o returno;
+    
+    je  L2          /* goto L2 */
+
+    ----------------------------------------------------------------
+
+    movl  (%r12), %eax    /* eax = *r12 */
+
+    movl pois sao 4 bytes ele pega a "variavel eax e atribui para o 
+    endereço de nums
+
+    ----------------------------------------------------------------
+
+    addl  $1, %ebx  /* ebx += 1; */
+
+    addl pois é um inteiro (4 bytes), pega a variavel i e implementa 1
+    
+    ---------------------------------------------------------------
+    
+    addq  $4, %r12  /* r12 += 4; */
+    
+    addl pois é um ponteiro (8 bytes), pega e passa para o proximo ponteiro
+    que aponta para o proximo elemento de nums
+    
+    ---------------------------------------------------------------
+    
+    jmp  L1         /* goto L1; */
+
+    volta para L1
+
+    FIMMM
+
+
+---------------------
+Ex 02
+---------------------
+
+Modificações feitas no codigo:
+
+   adicionei o inteiro sum =0.
+
+    movl  $0, %ecx      /* ecx = 0; */
+
+
+    em L1 implementei sum+= *p
+
+    addl %eax, %ecx
+
+    e mudei o print para L2 ja que esta fora do for
+    e mudei a variavel do print para imprimir o sum
+
+    /*************************************************************/
+    /* este trecho imprime o valor de %eax (estraga %eax)  */
+    movq    $Sf, %rdi    /* primeiro parametro (ponteiro)*/
+    movl    %ecx, %esi   /* segundo parametro  (inteiro) */
+    call  printf       /* chama a funcao da biblioteca */
+    /*************************************************************/
+
+
+---------------------
+Ex 03
+---------------------
+
+    testl $1, %ecx         /* Testa se o número é par */
+    jnz   L4               /* Se não for par, pule para L4 */
+
+    L4:
+    addl  $1, %ebx          /* ebx += 1; */
+    addq  $4, %r12          /* r12 += 4; */
+    jmp   L1                /* goto L1; */
+
+    /*************************************************************/
+    /* este trecho imprime o valor de %eax (estraga %eax)        */
+    movq    $Sf, %rdi      /* primeiro parametro (ponteiro)*/
+    movl    %eax, %esi     /* segundo parametro  (inteiro) */
+    call  printf           /* chama a funcao da biblioteca */
+    /*************************************************************/
+
+    adicionando isso e fazendo que L2 retorne para o fim ele faz com que os
+    numeros pares sejam impressos
+
+
+
+---------------------
+Ex 04
+---------------------
+
+    para estender o numero tenho que usar: 
+    movsbl  (%r12), %eax    /* Lê o byte e estende para 32 bits */
+    fazendo isso trocando em L1 funciona

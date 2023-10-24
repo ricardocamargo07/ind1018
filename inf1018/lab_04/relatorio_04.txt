@@ -1,0 +1,17 @@
+4
+    Temos dois tipos diferentes o int e o unsigned int,
+     int tem sinal logo x =-1 e unsigned int nao tem sinal 
+     logo x = 4294967295 sendo assim > 2.
+     Trocando o "%d" por "%u" podemos ver isso no printf.
+
+     Comprarando os programas 1 e 2 com o 3 podemos ver que 
+     quando o unsigned int é positivo o valor nao muda, pois
+     é um valor positivo nao tendo sinal para tirar.
+
+
+5
+    Temos que  signed char sc = -1 entao char 8 bits 11111111
+    fazendo a conversao para unsigned int esse valor nao será
+    representado como um valor negativo, sendo assim, unsigned int ui = sc
+    ui = 4294967295 ou 0xFFFFFFFF em hexadecimal valor com 32bits.
+    

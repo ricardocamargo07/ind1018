@@ -1,0 +1,16 @@
+RICARDO STUCKERT
+1713112
+
+LABORATÓRIO 02 - REPRESENTAÇÃO DE DADOS: INTEIROS SEM SINAL
+
+1.
+ a. Foi provado via o programa que o tamanho de um inteiro sao 4 bytes. De acaordo com o programa imprimiu 4 linhas fazendo jus ao tamanho do inteiro. Esses bytes estao armazenados na memoria em litte endian( valor do inteiro em hexadecimal está ordenado do byte menos para o mais importante ).
+ 
+ b. Ao aplicar o long vemos que o valor de bytes dobrou, como o esperado, e o numeros de linhas impressas tambem.
+ 
+ c. Ao aplicar o short vemos que o valor de bytes em relacao a interio ficou pela metade, como o esperado, e o numeros de linhas impressas tambem.
+ 
+ d. O valor em hexadecimal impresso, apos realizar as mudancas, e o mesmo da tabalea ASCII. Char tem 1 byte.
+ e.'A' de acordo com o programa (4100) o codigo ASCII é 0x41,' ' de acordo com o programa (2000) o codigo ASCII é 0x20, '\n' de acordo com o programa (0a00) o codigo ASCII é 0x0a, e '$' e acordo com o programa (2400) o codigo ASCII é 0x24
+ 
+ 
