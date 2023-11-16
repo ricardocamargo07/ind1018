@@ -1,0 +1,19 @@
+Ricardo de Camargo Stuckert
+1713112
+
+---------------------
+Ex 01
+---------------------
+A função para multiplicar por 2 um float, coloquei o campo float da union com o float
+do parâmetro da função float2. Por meio das macros obtive o sinal, a potência e a fração da representação. 
+Incrementei o expoente em 1 e utilizei a macro makefloat para criar um novo decimal. Retornei o float
+dessa manipulação. 
+
+
+---------------------
+Ex 02
+---------------------
+
+Na criação da função int2float, o tratamento do zero é seguido pela avaliação do sinal e cálculo do expoente. Utiliza-se uma função auxiliar para determinar o maior expoente da representação do inteiro. O valor do expoente é somado ao viés. A fração é obtida subtraindo-se 2*E, removendo o bit mais significativo. Dependendo de E, completa-se 0's à direita da fração. Os parâmetros são passados para makefloat, e o resultado é retornado.
+
+
